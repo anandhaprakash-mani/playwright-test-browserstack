@@ -1,0 +1,17 @@
+{
+  "name": "pw-bstack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.27.1",
+    "browserstack-local": "^1.5.1",
+    "cli-color": "^2.0.3",
+    "dotenv": "^16.0.3"
+  },
+  "scripts": {
+    "local": "PWBSTACK=false npx playwright test",
+    "bstack": "PWBSTACK=true npx playwright test",
+    "bstack:local": "BROWSERSTACK_LOCAL=true PWBSTACK=true npx playwright test"
+  }
+}
