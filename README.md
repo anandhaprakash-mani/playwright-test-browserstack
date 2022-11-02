@@ -4,7 +4,8 @@
 1. You have to set below environment variables before starting
 
 ```
-
+BROWSERSTACK_USERNAME=""
+BROWSERSTACK_ACCESS_KEY=""
 
 ```
 
