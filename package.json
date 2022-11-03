@@ -5,12 +5,17 @@
   "license": "MIT",
   "devDependencies": {
     "@playwright/test": "^1.27.1",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
     "browserstack-local": "^1.5.1",
     "cli-color": "^2.0.3",
     "dotenv": "^16.0.3",
+    "eslint": "^8.26.0",
     "typescript": "^4.8.4"
   },
   "scripts": {
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
     "tsc": "tsc --incremental -p tsconfig.json",
     "local": "PWBSTACK=false npx playwright test",
     "bstack": "PWBSTACK=true npx playwright test",

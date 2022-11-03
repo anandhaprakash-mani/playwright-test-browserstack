@@ -24,7 +24,7 @@ exports.BS_LOCAL_ARGS = {
 export const Browserstack = new BrowserstackService();
 
 export const test = base.test.extend<myPages>({
-    browser: async ({playwright}, use, testInfo) => {
+    browser: async ({ playwright }, use, testInfo) => {
         if (isBstack) {
             Browserstack.setBstackBuildCaps(testInfo.project);
             const bstackBrowser = await Browserstack.startBrowser(playwright);
@@ -35,7 +35,7 @@ export const test = base.test.extend<myPages>({
             await use(localBrowser);
         }
     },
-    page: async ({ browser, playwright }, use, testInfo) => {
+    page: async ({ browser }, use, testInfo) => {
         if (isBstack) {
             const bstackPage = await browser.newPage(testInfo.project.use);
             await Browserstack.setSessionName(bstackPage, testInfo);
@@ -47,11 +47,11 @@ export const test = base.test.extend<myPages>({
             await use(page);
         }
     },
-    CategoryPage: async({page}, use) => {
+    CategoryPage: async({ page }, use) => {
         const CategoryPO = new Category(page);
         await use(CategoryPO);
     },
-    ProductPage: async({page}, use) => {
+    ProductPage: async({ page }, use) => {
         const ProductPO = new Product(page);
         await use(ProductPO);
     }

@@ -1,5 +1,5 @@
 // global-teardown.js
-import {isBstackLocal} from "@utils/env";
+import { isBstackLocal } from '@utils/env';
 
 const { bsLocal } = require('../base/fixtures');
 const { promisify } = require('util');
@@ -14,7 +14,7 @@ module.exports = async () => {
         if (bsLocal && bsLocal.isRunning()) {
             bsLocal.stop(() => {
                 localStopped = true;
-                console.log(colors.green('Browserstack Local STOPPED..'))
+                console.log(colors.green('Browserstack Local STOPPED..'));
                 console.log(colors.magenta('---------------Global tear down done------------------'));
             });
             while (!localStopped) {

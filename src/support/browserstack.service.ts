@@ -12,7 +12,7 @@ export default class BrowserstackService {
     }
 
     public async startBrowser(playwright) {
-        return await playwright.chromium.connect({ wsEndpoint: `wss://cdp.browserstack.com/playwright?caps=${encodeURIComponent(JSON.stringify(this.caps),)}`});
+        return await playwright.chromium.connect({ wsEndpoint: `wss://cdp.browserstack.com/playwright?caps=${encodeURIComponent(JSON.stringify(this.caps),)}` });
     }
 
     public async setTestResult(page, testInfo) {
@@ -37,7 +37,7 @@ export default class BrowserstackService {
     }
 
     public async getSessionDetails(page) {
-        return  await page.evaluate(() => {}, `browserstack_executor: {"action": "getSessionDetails"}`);
+        return  await page.evaluate(() => {}, 'browserstack_executor: {"action": "getSessionDetails"}');
     }
 
 }

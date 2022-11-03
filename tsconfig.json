@@ -1,9 +1,11 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
     "target": "ES6",
     "strict": false,
     "module": "commonjs",
     "skipLibCheck": true,
+    "allowJs": true,
     "resolveJsonModule": true,
     "sourceMap": false,
     "outDir": "dist",
@@ -14,7 +16,8 @@
       "@global/*": ["src/global/*"],
       "@base/*": ["src/base/*"],
       "@support/*": ["src/support/*"],
-      "@utils/*": ["src/utils/*"],
+      "@utils/*": ["src/utils/*"]
     }
-  }
+  },
+  "exclude": ["node_modules"],
 }

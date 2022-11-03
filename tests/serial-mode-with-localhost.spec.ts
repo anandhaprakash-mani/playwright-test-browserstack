@@ -2,13 +2,13 @@ import { expect, Page } from '@playwright/test';
 import { Browserstack, test } from '@base/fixtures';
 import { Category } from '@pages/category.page';
 import { Product } from '@pages/product.page';
-import {isBstack, isBstackLocal} from '@utils/env';
+import { isBstack, isBstackLocal } from '@utils/env';
 
-test.describe.configure({mode: "serial"});
+test.describe.configure({ mode: 'serial' });
 let page: Page;
 let CategoryPage, ProductPage;
 
-test.skip(({  }) => !isBstackLocal);
+test.skip(({ }) => !isBstackLocal);
 
 test.describe('Serial mode tests 1', () => {
     test.beforeAll(async ({ browser }) => {
@@ -16,7 +16,7 @@ test.describe('Serial mode tests 1', () => {
         CategoryPage = new Category(page);
         ProductPage = new Product(page);
         if(isBstack) await Browserstack.setSessionName(page, test.info());
-    })
+    });
 
     test('1', async ({ }) => {
         await page.goto('http://localhost:3000/us/c/property/?automated=true&gtm=false');
@@ -40,5 +40,5 @@ test.describe('Serial mode tests 1', () => {
 
     test.afterAll(async () => {
         if(isBstack) await Browserstack.setTestResult(page, test.info());
-    })
-})
+    });
+});

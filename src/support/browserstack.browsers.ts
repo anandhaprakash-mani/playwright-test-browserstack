@@ -12,7 +12,7 @@ export const common_capabilities = {
     'browserstack.video': 'true',
     'browserstack.console': 'verbose',
     'browserstack.networkLogs': 'true',
-}
+};
 
 export const browsers = {
     chrome: {

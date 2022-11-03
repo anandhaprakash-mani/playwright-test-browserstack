@@ -4,7 +4,7 @@ import { Category } from '@pages/category.page';
 import { Product } from '@pages/product.page';
 import { isBstack } from '@utils/env';
 
-test.describe.configure({mode: 'serial'});
+test.describe.configure({ mode: 'serial' });
 let page: Page;
 let CategoryPage, ProductPage;
 
@@ -15,7 +15,7 @@ test.describe('Serial mode tests 2', () => {
         ProductPage = new Product(page);
         if(isBstack) await Browserstack.setSessionName(page, test.info());
         await page.goto('https://www.softwareadvice.com/property/?automated=true&gtm=false');
-    })
+    });
 
     test('1', async ({ }) => {
         const h1 = await CategoryPage.header;
@@ -36,5 +36,5 @@ test.describe('Serial mode tests 2', () => {
 
     test.afterAll(async () => {
         if(isBstack) await Browserstack.setTestResult(page, test.info());
-    })
-})
+    });
+});

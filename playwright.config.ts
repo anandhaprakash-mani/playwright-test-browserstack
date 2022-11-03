@@ -9,18 +9,18 @@ const config: PlaywrightTestConfig = {
     timeout: 60 * 1000,
     expect: {
         timeout: 10000,
-
     },
     fullyParallel: true,
     forbidOnly: !!process.env.CI,
     retries: process.env.CI ? 2 : 0,
     workers: process.env.CI ? 1 : undefined,
     use: {
+        baseURL: 'http://localhost:3000' || process.env.URL,
         actionTimeout: 0,
         navigationTimeout: 60*1000,
         headless: false,
         trace: 'off',
-        screenshot:'only-on-failure'
+        screenshot: 'only-on-failure'
     },
     projects: [
         {

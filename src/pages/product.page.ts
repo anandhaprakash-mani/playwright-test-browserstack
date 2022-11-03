@@ -1,5 +1,5 @@
 // playwright-dev-page.ts
-import { expect, Locator, Page } from '@playwright/test';
+import { Page } from '@playwright/test';
 
 export class Product {
     readonly page: Page;
@@ -8,7 +8,7 @@ export class Product {
         this.page = page;
     }
 
-    get header()            { return this.page.locator('.HugeSummaryBannerComponent h1')}
-    get compareTitle()      { return this.page.locator('[data-testid="readMore"] h2')}
+    get header()            { return this.page.locator('.HugeSummaryBannerComponent h1'); }
+    get compareTitle()      { return this.page.locator('[data-testid="readMore"] h2'); }
 
 }
