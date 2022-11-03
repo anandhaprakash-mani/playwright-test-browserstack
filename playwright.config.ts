@@ -1,10 +1,10 @@
 import type { PlaywrightTestConfig } from '@playwright/test';
-import { VIEWPORTS } from './constants';
+import { VIEWPORTS } from '@utils/env';
 require('dotenv').config();
 
 const config: PlaywrightTestConfig = {
-    globalSetup: require.resolve('./global/global-setup'),
-    globalTeardown: require.resolve('./global/global-teardown'),
+    globalSetup: require.resolve('./src/global/global-setup'),
+    globalTeardown: require.resolve('./src/global/global-teardown'),
     testDir: './tests',
     timeout: 60 * 1000,
     expect: {
@@ -76,11 +76,6 @@ const config: PlaywrightTestConfig = {
             },
         },
     ],
-    // outputDir: 'test-results/',
-    // webServer: {
-    //   command: 'npm run start',
-    //   port: 3000,
-    // },
 };
 
 export default config;

@@ -1,3 +1,5 @@
 node_modules
 local.log
 .idea
+test-results
+dist

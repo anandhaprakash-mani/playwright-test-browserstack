@@ -1,10 +1,10 @@
 // global-setup.js
-import {isBstackLocal} from "../constants";
+import {isBstackLocal} from "@utils/env";
 
-const { bsLocal, BS_LOCAL_ARGS } = require('../base.fixtures');
+const { bsLocal, BS_LOCAL_ARGS } = require('../base/fixtures');
 const colors = require('cli-color');
 
-module.exports = () => {
+async function globalSetup() {
     if(isBstackLocal) {
         console.log(colors.magenta('---------------Global set up started--------------'));
         console.log(colors.yellow('Establishing browserstack local tunnel connection..'));
@@ -16,4 +16,6 @@ module.exports = () => {
         }
         console.log(colors.magenta('--------------Global set up done------------------'));
     }
-};
+}
+
+export default globalSetup;

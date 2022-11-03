@@ -7,9 +7,11 @@
     "@playwright/test": "^1.27.1",
     "browserstack-local": "^1.5.1",
     "cli-color": "^2.0.3",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "typescript": "^4.8.4"
   },
   "scripts": {
+    "tsc": "tsc --incremental -p tsconfig.json",
     "local": "PWBSTACK=false npx playwright test",
     "bstack": "PWBSTACK=true npx playwright test",
     "bstack:local": "BROWSERSTACK_LOCAL=true PWBSTACK=true npx playwright test"

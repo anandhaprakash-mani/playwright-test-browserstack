@@ -1,8 +1,8 @@
 import { expect, Page } from '@playwright/test';
-import { Browserstack, test } from '../base.fixtures';
-import { Category } from '../page-objects/category.page';
-import { Product } from '../page-objects/product.page';
-import { isBstack } from '../constants';
+import { Browserstack, test } from '@base/fixtures';
+import { Category } from '@pages/category.page';
+import { Product } from '@pages/product.page';
+import { isBstack } from '@utils/env';
 
 test.describe.configure({mode: 'serial'});
 let page: Page;

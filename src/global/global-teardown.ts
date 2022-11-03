@@ -1,7 +1,7 @@
 // global-teardown.js
-import {isBstackLocal} from "../constants";
+import {isBstackLocal} from "@utils/env";
 
-const { bsLocal } = require('../base.fixtures');
+const { bsLocal } = require('../base/fixtures');
 const { promisify } = require('util');
 const sleep = promisify(setTimeout);
 const colors = require('cli-color');

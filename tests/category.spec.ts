@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { test } from '../base.fixtures';
+import { test } from '@base/fixtures';
 
 test('category page 1', async ({ page, CategoryPage }) => {
     await page.goto('https://www.softwareadvice.com/property//');

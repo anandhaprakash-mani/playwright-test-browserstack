@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
-import { test } from '../base.fixtures'
-import { Product } from '../page-objects/product.page';
+import { test } from '@base/fixtures'
+import { Product } from '@pages/product.page';
 
 test('product page', async ({ page }) => {
   const ProductPage = new Product(page);

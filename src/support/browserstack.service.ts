@@ -1,5 +1,5 @@
-import { browsers } from './browserstack.browsers';
-import * as util from '../support/helper.functions';
+import { browsers } from '@support/browserstack.browsers';
+import * as util from '@utils/helper';
 require('dotenv').config();
 
 export default class BrowserstackService {

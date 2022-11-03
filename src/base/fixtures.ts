@@ -1,8 +1,8 @@
-import BrowserstackService from './support/browserstack.service';
+import BrowserstackService from '../support/browserstack.service';
 import * as base from '@playwright/test';
-import { Category } from './page-objects/category.page';
-import { Product } from './page-objects/product.page';
-import { isBstack } from './constants';
+import { Category } from '@pages/category.page';
+import { Product } from '@pages/product.page';
+import { isBstack } from '@utils/env';
 const BrowserStackLocal = require('browserstack-local');
 require('dotenv').config();
 
