@@ -16,7 +16,7 @@
   "scripts": {
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
-    "tsc": "tsc --incremental -p tsconfig.json",
+    "tsc": "tsc -p tsconfig.json",
     "local": "PWBSTACK=false npx playwright test",
     "bstack": "PWBSTACK=true npx playwright test",
     "bstack:local": "BROWSERSTACK_LOCAL=true PWBSTACK=true npx playwright test"

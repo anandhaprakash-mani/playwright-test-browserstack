@@ -1,8 +1,8 @@
-import { browsers } from '@support/browserstack.browsers';
+import { browsers } from '@browserstack/bstack.caps';
 import * as util from '@utils/helper';
 require('dotenv').config();
 
-export default class BrowserstackService {
+export default class BstackService {
     public caps: {};
 
     public setBstackBuildCaps(project) {

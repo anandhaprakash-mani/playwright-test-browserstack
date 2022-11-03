@@ -1,4 +1,4 @@
-import BrowserstackService from '../support/browserstack.service';
+import BrowserstackService from '@browserstack/bstack.service';
 import * as base from '@playwright/test';
 import { Category } from '@pages/category.page';
 import { Product } from '@pages/product.page';

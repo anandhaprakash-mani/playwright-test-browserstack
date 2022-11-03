@@ -5,7 +5,6 @@
     "strict": false,
     "module": "commonjs",
     "skipLibCheck": true,
-    "allowJs": true,
     "resolveJsonModule": true,
     "sourceMap": false,
     "outDir": "dist",
@@ -15,9 +14,9 @@
       "@data/*": ["src/data/*"],
       "@global/*": ["src/global/*"],
       "@base/*": ["src/base/*"],
-      "@support/*": ["src/support/*"],
+      "@browserstack/*": ["src/browserstack/*"],
       "@utils/*": ["src/utils/*"]
     }
   },
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "dist"],
 }
