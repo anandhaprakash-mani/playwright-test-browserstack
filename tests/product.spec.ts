@@ -4,7 +4,7 @@ import { Product } from '@pages/product.page';
 
 test('product page', async ({ page }) => {
     const ProductPage = new Product(page);
-    await page.goto('https://www-git-playwright-poc-softwareadvice.vercel.app/crm/salesforce-profile/');
+    await page.goto('https://www.softwareadvice.com/crm/hubspot-profile/');
     const h1 = await ProductPage.header;
     const title = await ProductPage.compareTitle;
     await expect(h1).toContainText('Salesforce Sales Cloud');

@@ -14,10 +14,10 @@ test.describe('Serial mode tests 2', () => {
         CategoryPage = new Category(page);
         ProductPage = new Product(page);
         if(isBstack) await Browserstack.setSessionName(page, test.info());
-        await page.goto('https://www.softwareadvice.com/property/?automated=true&gtm=false');
     });
 
     test('1', async ({ }) => {
+        await page.goto('https://www.softwareadvice.com/property/?automated=true&gtm=false');
         const h1 = await CategoryPage.header;
         const title = await CategoryPage.compareTitle;
         await expect(h1).toContainText('Find the best');
